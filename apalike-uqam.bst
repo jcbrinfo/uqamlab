@@ -2,6 +2,7 @@
 % Gisele Legault, 28 aout 2013.
 % Jean-Christophe Beaupré, 2017.
 % 	* Généralisation du cas « sans date » à tout ce qui n’est pas un nombre.
+%	* Ne pas ajouter l’URL des conférences lorsque l’article possède un DOI.
 % construit sur le style `apalike2'.
 % Changements:
 %  1) francisation des mots et des fonctions fr.XXX, exemple fr.and, fr.editeur
@@ -1091,7 +1092,10 @@ FUNCTION {inproceedings}
   note output
   format.doi output				% UQAM ajout doi G.L. 28/08/2013
   new.block
-  format.url output				% UQAM ajout url G.L. 28/08/2013
+  doi empty$
+    {format.url output}			% UQAM ajout url G.L. 28/08/2013
+    {skip$}
+  if$
   fin.entry
 }
 

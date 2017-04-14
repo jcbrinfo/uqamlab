@@ -113,6 +113,9 @@
 %   [Banque de dépannage liguistique de l’OQLF](http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?id=2039)
 % * Toutes les années non numériques sont mis entre crochets dans la
 %   bibliographie.
+% * Si un article de conférence possède déjà un DOI, l’attribut `URL` est
+%   ignoré. Cela évite de se retrouver avec l’URL de la conférence en plus de
+%   l’URL de l’article dans l’entrée bibliographique.
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{UqamLab}[2017/04/09 v1.3L Classe pour les mémoires à l’UQAM]
