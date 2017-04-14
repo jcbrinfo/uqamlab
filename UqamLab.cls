@@ -1,6 +1,9 @@
 % Fusion de `memoireuqam1.3`, de `memoireuqam1.3ang` et de plusieurs astuces
 % pratiques par Jean-Christophe Beaupré.
 %
+% Conçu pour fonctionner avec XeLaTeX. Peut fonctionner avec d’autres moteurs
+% TeX (à vos risques et périls).
+%
 % Description originale
 % ---------------------
 % format LaTeX pour memoire et these de l'UQAM
