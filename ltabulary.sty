@@ -1,0 +1,37 @@
+% Environnement `ltabulary` fusionnant `tabulary` avec `longtable`.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ltabulary}
+
+\RequirePackage{longtable}
+\RequirePackage{tabulary}
+
+% The original code comes from <http://tex.stackexchange.com/questions/197687/several-caption-problems-in-longtable-and-tabulary/197808#197808>.
+% CC-BY-SA 3.0 David Carlisle and justibus (LaTeX Stack Exchange)
+
+%% define a new envrionment which marries longtable with tabulary
+% from http://tex.stackexchange.com/questions/78075/multi-page-with-tabulary (see there for usage)
+% with modifications taken from the ltxtable package to make captions work
+\newcommand*\TY@cap@gobble[2][]{\\}% from ltxtable (adjusted)
+\def\ltabulary{%
+    \def\caption{% from ltxtable (adjusted)
+        \@ifstar\TY@cap@gobble\TY@cap@gobble}
+    \def\endfirsthead{\\}%
+    \def\endhead{\\}%
+    \def\endfoot{\\}%
+    \def\endlastfoot{\\}%
+    \def\tabulary{%
+        \def\TY@final{%
+    \def\endfirsthead{\LT@end@hd@ft\LT@firsthead}%
+    \def\endhead{\LT@end@hd@ft\LT@head}%
+    \def\endfoot{\LT@end@hd@ft\LT@foot}%
+    \def\endlastfoot{\LT@end@hd@ft\LT@lastfoot}%
+    \longtable}%
+        \let\endTY@final\endlongtable
+        \TY@tabular}%
+    \dimen@\columnwidth
+    \advance\dimen@-\LTleft
+    \advance\dimen@-\LTright
+    \tabulary\dimen@}
+\def\endltabulary{\endtabulary}
+
+\endinput

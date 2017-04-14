@@ -1,0 +1,47 @@
+﻿\documentclass[memoire]{UqamLab}
+% Indiquez `memoire`, `these` ou `rapport`, selon le cas.
+% Pour les document en anglais, ajoutez l’option `english`.
+
+\title{Titre en français}
+\titleEnglish{English Title}
+\author{Votre Nom}
+\matter{informatique}
+\matterEnglish{computer science}
+
+% ------------------------------------------------------------------------------
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% Pages préliminaires
+% ------------------------------------------------------------------------------
+
+\include{remerciements}
+\tableofcontents
+\listoftables
+\listoffigures
+
+\begin{resume}
+	% Lorsque la langue principale est l’anglais, le résumé en français.
+\end{resume}
+
+\begin{abstract}
+	% Le résumé, dans la langue principale du document.
+\end{abstract}
+
+% ------------------------------------------------------------------------------
+% Document principal
+% ------------------------------------------------------------------------------
+
+\include{introduction}
+…
+
+% ------------------------------------------------------------------------------
+% Pages liminaires
+% ------------------------------------------------------------------------------
+
+\appendix
+\include{appendix1}
+
+\bibliography{votre base de données BibTeX}
+\end{document}
