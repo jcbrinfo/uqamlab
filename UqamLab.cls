@@ -45,7 +45,10 @@
 %   avec `\citeyear` tout en respectant la règle « 7. Auteur collectif ».
 %   Exemple : `\citetext{{E}uropean {A}ssociation for {S}tandardizing {I}nformation and {C}ommunication {S}ystems ({ECMA}), \citeyear{ECMA-262-v6}}` la première fois et `\citetext{{ECMA}, \citeyear{ECMA-262-v6}}` la deuxième fois.
 % * Lorqu’il n’y a pas de date, inscrivez `\iflanguage{english}{n.d.}{s. d.}`
-%   dans l’attribut `YEAR` de l’entrée BibTeX.
+%   dans l’attribut `YEAR` de l’entrée BibTeX. Vous devez aussi retravailler
+%   l’appel à citation à la main puisque `natbib` n’est pas conçu pour composer
+%   avec ce genre de mention (et vous vous retrouvez avec quelque chose comme
+%   « ds da »). Exemple : \citetext{\citeauthor{page-web}, s. d.}
 %
 % Exemple d’entrée BibTeX pour une norme
 % --------------------------------------
