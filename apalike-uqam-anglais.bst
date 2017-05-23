@@ -204,10 +204,6 @@ FUNCTION{fr.phd}{		%% "Th\`ese de doctorat"
 "(PhD thesis)"
 }
 
-FUNCTION{sans.date}{		%% "sans date"
-"n.d."
-}
-
 STRINGS { urlintro doiprefix doiurl }
 
 FUNCTION{init.variables}
