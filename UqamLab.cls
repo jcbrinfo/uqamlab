@@ -254,6 +254,11 @@
 	\renewcommand{\abstractname}{R\'esum\'e}
 }
 
+% Désactiver les changements étranges de la mise en page.
+\frenchbsetup {
+	FrenchFootnotes=false % À l’UQAM, on suit la même règle qu’en anglais (appel de note toujours en exposant).
+}
+
 % Désactiver les régles d’espacement françaises.
 \renewcommand{\FBthinspace}{}
 
