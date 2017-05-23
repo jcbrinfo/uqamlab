@@ -87,6 +87,7 @@
 % * Les paquetages suivants sont préconfigurés :
 %   * `babel`
 %   * `bookmark`
+%   * `comment`
 %   * `fancyvrb`
 %   * `float`
 %   * `fontspec`
@@ -172,6 +173,12 @@
 \ProcessOptions*
 
 \LoadClass[twoside, letterpaper, 12pt]{report}
+
+% ------------------------------------------------------------------------------
+% Commentaires
+% ------------------------------------------------------------------------------
+
+\RequirePackage{comment}
 
 % ------------------------------------------------------------------------------
 % PDF
