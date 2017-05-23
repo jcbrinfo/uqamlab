@@ -871,11 +871,7 @@
 		\end{canadien}%
 	}
 }{
-	\newenvironment{resume}{
-		\iffalse
-	}{
-		\fi
-	}
+	\excludecomment{resume}
 }
 
 % ------------------------------------------------------------------------------
