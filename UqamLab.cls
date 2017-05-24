@@ -122,7 +122,7 @@
 %   l’URL de l’article dans l’entrée bibliographique.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{UqamLab}[2017/04/09 v1.3L Classe pour les mémoires à l’UQAM]
+\ProvidesClass{UqamLab}[2017/05/23 v1.3L Classe pour les mémoires à l’UQAM]
 
 % ------------------------------------------------------------------------------
 % Options et classe de base
@@ -862,13 +862,13 @@
 
 \@ifEnglish{
 	\newenvironment{resume}{%
-		\begin{canadien}
+		\begin{otherlanguage}{canadien}
 		\chapter*{\@UpperRef{R\'esum\'e}}
 		\addtocontents{toc}{\protect\vspace{1.5ex}}
 		\addcontentsline{toc}{chapter}{\@UpperRef{R\'esum\'e}}
 		\baselineskip=\simpleinter%
 	}{%
-		\end{canadien}%
+		\end{otherlanguage}%
 	}
 }{
 	\excludecomment{resume}
