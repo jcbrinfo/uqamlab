@@ -122,7 +122,7 @@
 %   l’URL de l’article dans l’entrée bibliographique.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{UqamLab}[2017/05/23 v1.3L Classe pour les mémoires à l’UQAM]
+\ProvidesClass{UqamLab}[2017/05/24 v1.3L Classe pour les mémoires à l’UQAM]
 
 % ------------------------------------------------------------------------------
 % Options et classe de base
@@ -238,9 +238,12 @@
 % ------------------------------------------------------------------------------
 
 \@ifEnglish{
-	\RequirePackage[canadien, english]{babel}
+	% Il semble y avoir un bug lorsque `babel` chargé depuis `RequirePackage` :
+	% `canadien` prend toujours le dessus, à moins que l’option `main` soit
+	% explicitée.
+	\RequirePackage[canadien, main=english]{babel}
 }{
-	\RequirePackage[english, canadien]{babel}
+	\RequirePackage[english, main=canadien]{babel}
 	\renewcommand{\contentsname}{TABLE DES MATI\`ERES}
 	\renewcommand{\listfigurename}{LISTE DES FIGURES}
 	\renewcommand{\listtablename}{LISTE DES TABLEAUX}
