@@ -832,7 +832,7 @@
 		{\MakeTextUppercase{\@author}}
 		\\
 		\vfill
-		MakeTextUppercase{\@monthEnglish{\month} \the\year}
+		\MakeTextUppercase{\@monthEnglish{\month} \the\year}
 		\\
 	\end{center}
 	\end{doublespace}
