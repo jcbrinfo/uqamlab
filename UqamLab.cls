@@ -186,7 +186,7 @@
 
 \RequirePackage{ifpdf}
 
-% Insère des liens à la table des matières, qui sont invisibles.
+% Insère des liens hypertextes, sans changer le style.
 \RequirePackage[hidelinks]{hyperref}
 % Solution de contournement d’un bug d’`hyperref` avec un `%` dans le texte.
 \RequirePackage{bookmark}
