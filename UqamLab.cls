@@ -122,7 +122,7 @@
 %   l’URL de l’article dans l’entrée bibliographique.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{UqamLab}[2017/05/24 v1.3L Classe pour les mémoires à l’UQAM]
+\ProvidesClass{UqamLab}[2017/07/10 v1.3L Classe pour les mémoires à l’UQAM]
 
 % ------------------------------------------------------------------------------
 % Options et classe de base
@@ -179,30 +179,6 @@
 % ------------------------------------------------------------------------------
 
 \RequirePackage{comment}
-
-% ------------------------------------------------------------------------------
-% PDF
-% ------------------------------------------------------------------------------
-
-\RequirePackage{ifpdf}
-
-% Insère des liens hypertextes, sans changer le style.
-\RequirePackage[hidelinks]{hyperref}
-% Solution de contournement d’un bug d’`hyperref` avec un `%` dans le texte.
-\RequirePackage{bookmark}
-
-% ------------------------------------------------------------------------------
-% Case
-% ------------------------------------------------------------------------------
-
-\RequirePackage{textcase}
-\newcommand{\@UpperRef}[1]{%
-	\texorpdfstring{%
-		\MakeTextUppercase{#1}%
-	}{%
-		#1%
-	}%
-}
 
 % ------------------------------------------------------------------------------
 % Polices de caractères
@@ -423,6 +399,30 @@
 	\global\@topnum\z@    % Prevents figures from going at top of page.
 	\@afterindenttrue     % indent in first paragraph.  Change to \@afterindentfalse to have none.
 	\secdef\@chapter\@schapter%
+}
+
+% ------------------------------------------------------------------------------
+% PDF
+% ------------------------------------------------------------------------------
+
+\RequirePackage{ifpdf}
+
+% Insère des liens hypertextes, sans changer le style.
+\RequirePackage[hidelinks]{hyperref}
+% Solution de contournement d’un bug d’`hyperref` avec un `%` dans le texte.
+\RequirePackage{bookmark}
+
+% ------------------------------------------------------------------------------
+% Case
+% ------------------------------------------------------------------------------
+
+\RequirePackage{textcase}
+\newcommand{\@UpperRef}[1]{%
+	\texorpdfstring{%
+		\MakeTextUppercase{#1}%
+	}{%
+		#1%
+	}%
 }
 
 % ------------------------------------------------------------------------------
